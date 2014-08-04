@@ -104,7 +104,7 @@
 			<array>
 				<dict>
 					<key>match</key>
-					<string>(!=|!|&lt;=|&gt;=|&lt;|&gt;|===|==|%|&amp;&amp;|\|\|)|\b(and|or|eq|neq|ne|gte|gt|ge|lte|lt|le|not|mod)\b</string>
+					<string>(\|=|\+=|-=|\*=|\%=|!==|=|&=|\^=|~|/=|\-|\+|/ |\*|!=|!|&lt;=|&gt;=|&lt;|&gt;|===|==|%|&amp;&amp;|\|\|)|\b(and|or|xor)\b</string>
 					<key>name</key>
 					<string>keyword.operator.fenom</string>
 				</dict>
@@ -116,7 +116,7 @@
 				</dict>
 				<dict>
 					<key>match</key>
-					<string>\b(if|else|elseif|foreach|foreachelse|section|switch|case|break|default)\b</string>
+					<string>\b(var|if|else|elseif|foreach|foreachelse|autoescape|autotrim|for|extends|block|use|parent|filter|break|continue|forelse|ignore|include|insert|macro|import|raw|switch|case|unset)\b</string>
 					<key>name</key>
 					<string>keyword.control.fenom</string>
 				</dict>
@@ -136,13 +136,13 @@
 				</dict>
 				<dict>
 					<key>match</key>
-					<string>\b(capture|config_load|counter|cycle|debug|eval|fetch|include_php|include|insert|literal|math|strip|rdelim|ldelim|assign|constant|block|html_[a-z_]*)\b</string>
+					<string>\b(plus|from|as|capture|default|cycle)\b</string>
 					<key>name</key>
 					<string>support.function.built-in.fenom</string>
 				</dict>
 				<dict>
 					<key>match</key>
-					<string>\|(capitalize|cat|count_characters|count_paragraphs|count_sentences|count_words|date_format|default|escape|indent|lower|nl2br|regex_replace|replace|spacify|string_format|strip_tags|strip|truncate|upper|wordwrap)</string>
+					<string>(match|ematch|date_format|upper|up|ereplace|escape|esplit|join|length|replace|strip_tags|strip|truncate|split|count|declination|catinfo|dateformat|limit|image)|(%|)(in)\b</string>
 					<key>name</key>
 					<string>support.function.variable-modifier.fenom</string>
 				</dict>
@@ -253,7 +253,7 @@
 						</dict>
 					</dict>
 					<key>match</key>
-					<string>(\$)([a-zA-Z_][a-zA-Z0-9_]*)\b</string>
+					<string>(\$)([a-zA-Z_][a-zA-Z0-9_]*)\b|(\$.)([a-zA-Z_.][a-zA-Z0-9_.]*)\b</string>
 					<key>name</key>
 					<string>variable.other.fenom</string>
 				</dict>
@@ -311,6 +311,6 @@
 	<key>scopeName</key>
 	<string>text.html.fenom</string>
 	<key>uuid</key>
-	<string>6df52972-8arc-44fb-b480-b48o203m8af0</string>
+	<string>316a7c87-7ec7-4b41-b366-7d8832228af0</string>
 </dict>
 </plist>

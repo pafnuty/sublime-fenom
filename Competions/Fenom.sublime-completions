@@ -1,0 +1,8 @@
+{
+  "scope": "text.html.fenom, punctuation.definition.variable.fenom",
+
+  "completions":
+  [
+    { "trigger": "var {var}", "contents": "{var \\$${1:variable} = ${2:value}}" }
+  ]
+}
