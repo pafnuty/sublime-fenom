@@ -1,0 +1,11 @@
+<snippet>
+	<content><![CDATA[
+${FENOM_LDELIM:\{}if ${1:condition}${FENOM_RDELIM:\}}
+	$2
+${FENOM_LDELIM:\{}else${FENOM_RDELIM:\}}
+	$3
+${FENOM_LDELIM:\{}/if${FENOM_RDELIM:\}}
+]]></content>
+	<tabTrigger>ifelse</tabTrigger>
+	<scope>text.html.fenom,source.fenom</scope>
+</snippet>

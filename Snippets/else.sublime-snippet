@@ -1,0 +1,8 @@
+<snippet>
+	<content><![CDATA[
+${FENOM_LDELIM:\{}else${FENOM_RDELIM:\}}
+	$0
+]]></content>
+	<tabTrigger>else</tabTrigger>
+	<scope>text.html.fenom,source.fenom</scope>
+</snippet>

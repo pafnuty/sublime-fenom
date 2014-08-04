@@ -1,0 +1,12 @@
+<snippet>
+    <content><![CDATA[
+${FENOM_LDELIM:\{}switch \$${1:variable}${FENOM_RDELIM:\}}
+    ${FENOM_LDELIM:\{}case ${2:case_name}${FENOM_RDELIM:\}}
+        $0
+        ${3:${FENOM_LDELIM:\{}break${FENOM_RDELIM:\}}}
+    ${4:${FENOM_LDELIM:\{}default${FENOM_RDELIM:\}}}
+${FENOM_LDELIM:\{}/switch${FENOM_RDELIM:\}}
+]]></content>
+    <tabTrigger>switch</tabTrigger>
+    <scope>text.html.fenom,source.fenom</scope>
+</snippet>
