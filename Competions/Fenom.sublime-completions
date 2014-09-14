@@ -4,5 +4,6 @@
   "completions":
   [
     { "trigger": "var {var}", "contents": "{var \\$${1:variable} = ${2:value}}" }
+    { "trigger": "set {set}", "contents": "{set \\$${1:variable} = ${2:value}}" }
   ]
 }

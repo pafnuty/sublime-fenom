@@ -47,7 +47,7 @@
 	{$a ^= $b }
 	{$a <<= $b}
 	{$a >>= $b}
-	{var $b |= $flags}
+	{set $b |= $flags}
 
 	{* Операторы инкремента и декремента *}
 	{++$a}
@@ -216,6 +216,9 @@
 
 	{unset $a $b $c.d.e} multiple unset
 
+	{set $var|modifiers}
+		... any content ...
+	{/set}
 	{var $var|modifiers}
 		... any content ...
 	{/var}
