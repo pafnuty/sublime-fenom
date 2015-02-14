@@ -1,0 +1,10 @@
+<snippet>
+	<content><![CDATA[
+${FENOM_LDELIM:\{}add \$${1:var}${FENOM_RDELIM:\}}
+	$0
+${FENOM_LDELIM:\{}/add${FENOM_RDELIM:\}}
+]]></content>
+	<description>Block tag {add}</description>
+	<tabTrigger>add</tabTrigger>
+	<scope>text.html.fenom,source.fenom</scope>
+</snippet>

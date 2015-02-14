@@ -1,0 +1,16 @@
+<snippet>
+	<content><![CDATA[
+${FENOM_LDELIM:\{}foreach \$${1:list} as ${2:\$${3:key} => \$${4:value}} ${5:index=\$index first=\$first last=\$last}${FENOM_RDELIM:\}}
+	${6:${FENOM_LDELIM:\{}* code *${FENOM_RDELIM:\}}
+	${FENOM_LDELIM:\{}break${FENOM_RDELIM:\}}
+	${FENOM_LDELIM:\{}* code *${FENOM_RDELIM:\}}
+	${FENOM_LDELIM:\{}continue${FENOM_RDELIM:\}}
+	${FENOM_LDELIM:\{}* code *${FENOM_RDELIM:\}}
+${FENOM_LDELIM:\{}foreachelse${FENOM_RDELIM:\}}
+	${FENOM_LDELIM:\{}* code *${FENOM_RDELIM:\}}}
+${FENOM_LDELIM:\{}/foreach${FENOM_RDELIM:\}}$0
+]]></content>
+	<description>{foreach} full example</description>
+	<tabTrigger>foreach</tabTrigger>
+	<scope>text.html.fenom,source.fenom</scope>
+</snippet>

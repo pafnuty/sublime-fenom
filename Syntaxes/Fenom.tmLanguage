@@ -116,7 +116,7 @@
 				</dict>
 				<dict>
 					<key>match</key>
-					<string>\b(var|set|if|else|elseif|foreach|foreachelse|autoescape|autotrim|for|extends|block|use|parent|filter|break|continue|forelse|ignore|include|insert|macro|import|raw|switch|case|unset)\b</string>
+					<string>\b(var|set|add|if|else|elseif|foreach|foreachelse|autoescape|autotrim|for|extends|block|use|parent|filter|break|continue|forelse|ignore|include|insert|macro|import|raw|switch|case|unset)\b</string>
 					<key>name</key>
 					<string>keyword.control.fenom</string>
 				</dict>

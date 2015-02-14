@@ -58,6 +58,7 @@
 	{$a ~ $b}
 
 
+
 {* Синтаксис *}
 	{$foo.bar.baz}
 	{$foo.$bar.$baz}
@@ -80,23 +81,46 @@
 	{$foo->bar(5)->buz(5.5)}
 
 	{* Системная переменная *}
-	{$.get}
-	{$.post}
-	{$.cookie}
-	{$.session}
-	{$.globals}
-	{$.request}
-	{$.files}
-	{$.server}
-	{$.env}
-	{$.tpl.name}
-	{$.tpl.schema}
-	{$.version}
-	{$.const}
-
+	{$.env} — массив $_ENV.
+	{$.get} — массив $_GET.
+	{$.post} — массив $_POST.
+	{$.files} — массив $_FILES.
+	{$.cookie} — массив $_COOKIE.
+	{$.server} — массив $_SERVER.
+	{$.session} — массив $_SESSION.
+	{$.globals} — массив $GLOBALS.
+	{$.request} — массив $_REQUEST.
+	{$.tpl.name} — возвращает текущее название шаблона.
+	{$.tpl.basename} — возвращает текущее название шаблона без схемы.
+	{$.tpl.scm} — возвращает схему шаблона.
+	{$.tpl.options} — возвращает параметры шбалона в виде целого числа.
+	{$.tpl.depends} — возвращает массив шаблонов на которые ссылается текущий шаблон.
+	{$.tpl.time} — возвращает штамп времени когда шаблон последний раз менялся
+	{$.version} — возвращает версию Fenom.
+	{$.const} — обращение к PHP константе: $.const.PHP_EOL обращение к константе PHP_EOL. Поддерживается пространство имен которое разделяется через точку: $.const.Storage.FS::DIR_SEPARATOR обращение к PHP константе Storage\FS::DIR_SEPARATOR если такой констатнты нет будет взята константа Storage\FS\DIR_SEPARATOR.
+	{$.php} — обращение к статическомому методу. $.php.Storage.FS::put($filename, $data) обращение к методу Storage\FS::put($filename, $data). $.php.Storage.FS.put($filename, $data) Storage\FS\put($filename, $data)
+	{set $ferch = $.fetch($name, $values)} — реализует метод Fenom::fetch() в шаблоне. $name — имя шаблона, $values — дополнительные переменные, которые будут добавлены к существующим. Функция позволяет получить резуьтат работы шаблона в переменную.
 
 
 {* Теги *}
+
+	{set $v = 5}
+	{set $v = "value"}
+	{set $v = $x+$y}
+	{set $v = 4}
+	{set $v = $z++ + 1}
+	{set $v = --$z}
+	{set $v = $y/$x}
+	{set $v = $y-$x}
+	{set $v = $y*$x-2}
+	{set $v = ($y^$x)+7}
+
+	{set $v = [1,2,3]}
+	{set $v = []}
+	{set $v = ["one"|upper => 1, 4 => $x, "three" => 3]}
+	{set $v = ["key1" => $y*$x-2, "key2" => ["z" => $z]]}
+
+	{set $v = count([1,2,3])+7}
 
 	{autoescape true}
 		...
@@ -215,13 +239,7 @@
 	{/switch}
 
 	{unset $a $b $c.d.e} multiple unset
-
-	{set $var|modifiers}
-		... any content ...
-	{/set}
-	{var $var|modifiers}
-		... any content ...
-	{/var}
+	
 
 
 

@@ -1,0 +1,8 @@
+<snippet>
+	<content><![CDATA[
+${FENOM_LDELIM:\{}set \$${1:foo} = ${2:'bar'}${FENOM_RDELIM:\}}${0}
+]]></content>
+	<description>Inline tag {set}</description>
+	<tabTrigger>set</tabTrigger>
+	<scope>text.html.fenom,source.fenom</scope>
+</snippet>

@@ -1,9 +1,10 @@
 <snippet>
 	<content><![CDATA[
-${FENOM_LDELIM:\{}foreach \$${1:collection} as ${2: \$${3:key} => \$${4:item}} ${FENOM_RDELIM:\}}
+${FENOM_LDELIM:\{}foreach \$${1:list} as \$${2:value} ${FENOM_RDELIM:\}}
 	$0
 ${FENOM_LDELIM:\{}/foreach${FENOM_RDELIM:\}}
 ]]></content>
+	<description>{foreach $list as $value}</description>
 	<tabTrigger>foreach</tabTrigger>
 	<scope>text.html.fenom,source.fenom</scope>
 </snippet>

@@ -1,8 +1,0 @@
-<snippet>
-    <content><![CDATA[
-${FENOM_LDELIM:\{}/switch${FENOM_RDELIM:\}}
-$0
-]]></content>
-    <tabTrigger>/switch</tabTrigger>
-    <scope>text.html.fenom,source.fenom</scope>
-</snippet>

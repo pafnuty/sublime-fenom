@@ -1,9 +1,9 @@
 <snippet>
     <content><![CDATA[
 ${FENOM_LDELIM:\{}case ${1:case_name}${FENOM_RDELIM:\}}
-    $0
-    ${2:${FENOM_LDELIM:\{}break${FENOM_RDELIM:\}}}
+	$0
 ]]></content>
+	<description>{case}</description>
     <tabTrigger>case</tabTrigger>
     <scope>text.html.fenom,source.fenom</scope>
 </snippet>
