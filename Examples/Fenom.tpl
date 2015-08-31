@@ -171,16 +171,6 @@
 		Remove all HTML <b>tags</b> and truncate {$text} to 20 symbols
 	{/filter}
 
-	{for $counter=<start> to=<end> [step=<step>] [index=$index] [first=$first] [last=$last]}
-		{* ...code... *}
-	{break}
-		{* ...code... *}
-	{continue}
-		{* ...code... *}
-	{forelse}
-		{* ...code... *}
-	{/for}
-
 	{foreach $list as [$key =>] $value [index=$index] [first=$first] [last=$last]}
 		{* ...code... *}
 	{break}
@@ -203,6 +193,12 @@
 		var data = {"time": obj.ts};
 	{/ignore}
 
+	{if:ignore $cdn.yandex}
+		var item = {cdn: "//yandex.st/"};
+	{/if}
+	{script:ignore} ... {/script}
+	{foreach:ignore ...} ... {/foreach}
+
 	{include "about.tpl" page=$item limit=50}
 
 	{insert 'b.tpl'}
@@ -222,6 +218,13 @@
 		...
 		{"name is: <b>{$name|low}</b>"} {* escape *}
 		{raw "name is: <b>{$name|low}</b>"} {* unescape *}
+		...
+	{/autoescape}
+
+	{autoescape true}
+		...
+		{my_func page=5} {* escape *}
+		{my_func:raw page=5} {* unescape *}
 		...
 	{/autoescape}
 

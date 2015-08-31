@@ -1,0 +1,9 @@
+<snippet>
+	<content><![CDATA[
+${FENOM_LDELIM:\{}filter|${1:strip_tags}${FENOM_RDELIM:\}}
+	$0
+${FENOM_LDELIM:\{}/filter${FENOM_RDELIM:\}}
+]]></content>
+	<tabTrigger>filter</tabTrigger>
+	<scope>text.html.fenom,source.fenom</scope>
+</snippet>
